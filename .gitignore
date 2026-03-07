@@ -1,0 +1,24 @@
+# --- VS Code specific ---
+.vscode/
+*.code-workspace
+.history/
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Local Environment / Secrets ---
+.env
+.env.local
+
+# --- Backup and Temp Files ---
+*.bak
+*.log
+*.tmp
+
+# --- Future-proofing (Node/NPM) ---
+node_modules/
+dist/
+build/
+.npm
