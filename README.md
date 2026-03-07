@@ -1,4 +1,4 @@
-# Frontend Logic Portfolio 🚀
+# Frontend Logic Portfolio 
 
 A curated collection of high-quality UI components and frontend logic implementations. This repository focuses on clean code, user experience (UX), and modern web standards.
 
