@@ -12,36 +12,47 @@ togglePassword.addEventListener('click', function () {
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
+    const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const emailError = document.getElementById('emailError');
-    const passwordError = document.getElementById('passwordError');
     
     let isValid = true;
 
-    // Reset styles
+    // Reset styles before checking
     resetErrors();
 
-    // Email Check
-    if (!email.includes('@')) {
-        showError('email', emailError, 'Enter a valid email address');
+    // Username Check
+    if (username.trim().length < 3) {
+        showError('username', 'usernameError', 'Username must be at least 3 characters');
+        isValid = false;
+    }
+
+    // Email Check (Regex pattern for real-world validation)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        showError('email', 'emailError', 'Please enter a valid email address');
         isValid = false;
     }
 
     // Password Check
     if (password.length < 8) {
-        showError('password', passwordError, 'Password must be at least 8 characters');
+        showError('password', 'passwordError', 'Password must be at least 8 characters');
         isValid = false;
     }
 
     if (isValid) {
-        alert("Registration Successful!");
-        console.log("Form Submitted Successfully");
+        alert(" Registration Successful!");
+        console.log("Form Data:", { username, email });
+        // You could clear the form here: this.reset();
     }
 });
 
-function showError(inputId, errorElement, message) {
-    document.getElementById(inputId).style.borderColor = 'var(--error-color)';
+// 3. Helper Functions for Clean Logic
+function showError(inputId, errorId, message) {
+    const inputField = document.getElementById(inputId);
+    const errorElement = document.getElementById(errorId);
+    
+    inputField.style.borderColor = 'var(--error-color)';
     errorElement.innerText = message;
     errorElement.style.display = 'block';
 }
@@ -49,6 +60,7 @@ function showError(inputId, errorElement, message) {
 function resetErrors() {
     const inputs = document.querySelectorAll('input');
     const errors = document.querySelectorAll('.error-msg');
+    
     inputs.forEach(input => input.style.borderColor = '#eee');
     errors.forEach(err => err.style.display = 'none');
 }
