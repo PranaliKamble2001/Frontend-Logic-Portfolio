@@ -1,3 +1,6 @@
+
+
+
 :root {
     --primary-color: #4a90e2;
     --secondary-color: #357abd;
@@ -32,7 +35,7 @@ h2 { text-align: center; color: #333; margin-bottom: 8px; }
 .input-group { margin-bottom: 20px; position: relative; }
 .input-group label { display: block; margin-bottom: 8px; color: #555; font-weight: 600; }
 
-.password-wrapper { position: relative; display: flex; align-items: center; }
+.password-wrapper { position: relative; display: flex; align-items: center; width: 100%; }
 
 .input-group input {
     width: 100%;
@@ -58,9 +61,21 @@ h2 { text-align: center; color: #333; margin-bottom: 8px; }
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* IE 10+ and Edge */
     user-select: none;
+   
 }
 
-.error-msg { color: var(--error-color); font-size: 12px; display: none; margin-top: 5px; }
+.error-msg { 
+    color: var(--error-color); 
+    font-size: 12px; 
+    display: none; 
+    margin-top: 5px;
+    animation: fadeIn 0.3s ease; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 button {
     width: 100%;
