@@ -1,39 +1,53 @@
-# Frontend Logic Portfolio 
+# Frontend Logic Portfolio
 
-A curated collection of high-quality UI components and frontend logic implementations. This repository focuses on clean code, user experience (UX), and modern web standards.
+A curated collection of high-quality UI components and frontend logic implementations. This repository focuses on **clean code**, **user experience (UX)**, and **modern web standards**.
 
---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
-## Current Modules
+### 📂 Module 1: Registration Module
+**Purpose:** A modern, responsive user registration form with integrated client-side logic.
+* **Location:** `/Registration-Form`
+* **Logic Features:**
+    * **Real-time Validation:** Checks for valid email formats and password length using Regex.
+    * **UX Enhancements:** Interactive password visibility toggle (Show/Hide).
+    * **Modular Error Handling:** Uses a central `showError` helper function to maintain DRY code.
+    * **State Management:** Resets UI states and error messages dynamically upon each submission attempt.
 
-### 1. Registration Module
-A modern, responsive user registration form with integrated client-side logic.
-* **Folder**: `/Registration-Form`
-* **Features**:
-    * **Real-time Validation**: Checks for valid email formats and password length.
-    * **UX Enhancements**: Password visibility toggle (Show/Hide feature).
-    * **Modular Error Handling**: Uses a central `showError` helper function to maintain    clean, DRY code.
-    * **State Management**: Resets UI states and error messages dynamically upon each submission attempt.
+---------------------------------------------------------------------------------------------
 
-### 2. Dynamic Search Filter
-A high-performance "Instant Finder" demonstrating real-time data manipulation and DOM synchronization.
-* **Folder**: `/Dynamic-Search-Filter`
-* **Features**:
-* **Array Filtering**: Utilizes JavaScript `.filter()` to match user input against a data set.
- * **Dynamic DOM Updates**: Re-renders the list instantly without a page refresh using`.map()`.
- * **Case-Insensitive Search**: Optimized logic to handle various user typing styles.
- * **Responsive UI**: Clean, card-based layout designed with CSS Flexbox for professional   presentation.
+### 📂 Module 2: Dynamic Search Filter
+**Purpose:** A high-performance "Instant Finder" demonstrating real-time data manipulation.
+* **Location:** `/Dynamic-Search-Filter`
+* **Logic Features:**
+    * **Array Filtering:** Utilizes JavaScript `.filter()` to match user input against a data set.
+    * **Dynamic DOM Updates:** Re-renders the list instantly without a page refresh using `.map()`.
+    * **Case-Insensitive Search:** Optimized logic to handle various user typing styles.
+    * **Responsive UI:** Clean, card-based layout designed with CSS Flexbox.
 
---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
-## Technical Stack
-* **HTML5**: Semantic structure for better accessibility and SEO.
-* **CSS3**: Custom properties (variables) and Flexbox for modern, responsive layouts.
-* **JavaScript**: DOM manipulation, event-driven logic, array methods, and pattern matching.
+### 📂 Module 3: Dark Mode Toggle
+**Purpose:** A professional theme switcher demonstrating **State Persistence** and **CSS Variable manipulation**.
+* **Location:** `/Dark-Mode-Toggle`
+* **Logic Features:**
+    * **LocalStorage Persistence:** Remembers the user’s theme preference (Light/Dark) even after a page refresh.
+    * **CSS Architecture:** Uses `:root` custom properties for instant, site-wide theme updates.
+    * **Entrance Animation:** Implements `@keyframes` for a smooth, professional fade-in effect on page load.
+    * **State-Aware UI:** Dynamically updates button text and status labels based on the active theme.
 
--------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
-## How to Run
-1. **Clone the repository**:
+###  Technical Stack
+
+| Technology | Application |
+| :--- | :--- |
+| **HTML5** | Semantic structure for accessibility and SEO. |
+| **CSS3** | Custom properties (variables), Flexbox, and **Keyframe Animations**. |
+| **JavaScript** | DOM manipulation, **LocalStorage API**, event-driven logic, and array methods. |
+
+---
+
+### 📥 How to Run
+1. **Clone the repository:**
    ```bash
    git clone [https://github.com/PranaliKamble2001/Frontend-Logic-Portfolio.git](https://github.com/PranaliKamble2001/Frontend-Logic-Portfolio.git)
