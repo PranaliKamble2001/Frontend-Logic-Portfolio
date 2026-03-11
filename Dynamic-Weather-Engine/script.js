@@ -12,41 +12,13 @@ let historyLog = [];
 
 const searchBtn = document.getElementById('searchBtn');
 const cityInput = document.getElementById('cityInput');
-
-searchBtn.addEventListener('click', () => {
-    processSearch();
-});
-
-cityInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') processSearch();
-});
-
-function processSearch() {
-    const city = cityInput.value.toLowerCase().trim();
-    const data = weatherStore[city];
-
-    if (data) {
-        updateUI(city, data);
-        addToHistory(city);
-    } else {
-        alert("City not found! Try Mumbai, London, or Tokyo , Dubai,Paris .");
-    }
-    cityInput.value = "";
-}
+const clearBtn = document.getElementById('clearBtn');
 
 function updateUI(city, data) {
     document.getElementById('cityName').innerText = city.toUpperCase();
     document.getElementById('temp').innerText = data.temp + "°C";
     document.getElementById('desc').innerText = "Condition: " + data.cond;
     document.body.style.background = data.color;
-}
-
-function addToHistory(city) {
-    if (!historyLog.includes(city)) {
-        historyLog.unshift(city);
-        if (historyLog.length > 3) historyLog.pop();
-        renderHistory();
-    }
 }
 
 function renderHistory() {
@@ -61,3 +33,36 @@ function renderHistory() {
         container.appendChild(span);
     });
 }
+
+function addToHistory(city) {
+    if (!historyLog.includes(city)) {
+        historyLog.unshift(city);
+        if (historyLog.length > 3) historyLog.pop();
+        renderHistory();
+    }
+}
+
+function processSearch() {
+    const city = cityInput.value.toLowerCase().trim();
+    const data = weatherStore[city];
+
+    if (data) {
+        updateUI(city, data);
+        addToHistory(city);
+    } else {
+        alert("City not found! Try Mumbai, London, Tokyo, Dubai, Paris, New York, or Sydney.");
+    }
+    cityInput.value = "";
+}
+
+searchBtn.addEventListener('click', processSearch);
+cityInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') processSearch(); });
+
+clearBtn.addEventListener('click', () => {
+    historyLog = [];
+    renderHistory();
+    document.body.style.background = "#121212";
+    document.getElementById('cityName').innerText = "Weather Engine";
+    document.getElementById('temp').innerText = "--°C";
+    document.getElementById('desc').innerText = "Enter a city to begin";
+});
