@@ -34,13 +34,14 @@ A curated collection of high-quality UI components and frontend logic implementa
 ------------------------------------------------------------------------------------------------
 
 ## 📂 Module 4: Dynamic Weather Engine
-* **Purpose:** A simulation-driven weather dashboard focusing on **Data Mapping** and **Search History logic**.
+* **Purpose:** A simulation-driven weather dashboard focusing on **Data Mapping**, **State Persistence**, and **Advanced CSS Micro-interactions**.
 * **Location:** `/Dynamic-Weather-Engine`
 * **Logic Features:**
-    * **Data Object Simulation:** Mimics a REST API response using a structured local `weatherStore` object.
-    * **History Management:** Implements a custom "Recent Search" stack using `.unshift()` and `.pop()` to track last 3 entries.
-    * **Dynamic Theming:** Modifies the global `background` property via JS to match real-time weather conditions.
-    * **Event Handling:** Integrated "Enter-key" listener and clickable history chips for optimized UX.
+    * **Data Object Simulation:** Mimics a REST API response using a structured local `weatherStore` object with support for multi-word cities (e.g., "New York").
+    * **State Management:** Implements a custom "Recent Search" stack using `.unshift()` and `.pop()` to maintain a rolling history of the last 3 entries.
+    * **State Reset Logic:** Includes a "Clear All" functionality that wipes the data array and resets the DOM to its initial state.
+    * **Dynamic Theming:** High-fidelity UI updates using CSS Linear Gradients that change based on city-specific data.
+    * **UX Micro-interactions:** Premium "floating" effects using `box-shadow` and `translateY` transforms to provide tactile user feedback.
 
 ------------------------------------------------------------------------------------------------
 
