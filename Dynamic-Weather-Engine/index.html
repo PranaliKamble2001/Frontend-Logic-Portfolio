@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Engine | Logic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Mumbai, London, Tokyo..." spellcheck="false">
+            <button id="searchBtn" type="button">Check</button>
+        </div>
+
+        <div id="display">
+            <h1 id="cityName">Weather Engine</h1>
+            <p id="temp">--°C</p>
+            <p id="desc">Enter a city to begin</p>
+        </div>
+
+        <div class="history-section">
+            <p>Recent Searches</p>
+            <div id="historyList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
