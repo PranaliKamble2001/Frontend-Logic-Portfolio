@@ -34,7 +34,7 @@ A curated collection of high-quality UI components and frontend logic implementa
 ------------------------------------------------------------------------------------------------
 
 ## 📂 Module 4: Dynamic Weather Engine
-* **Purpose:** A simulation-driven weather dashboard focusing on **Data Mapping**, **State Persistence**, and **Advanced CSS Micro-interactions**.
+* **Purpose: An interactive weather dashboard that simulates weather data using predefined JavaScript objects, demonstrating dynamic UI updates, state management, and modern CSS micro-interactions.
 * **Location:** `/Dynamic-Weather-Engine`
 * **Logic Features:**
     * **Data Object Simulation:** Mimics a REST API response using a structured local `weatherStore` object with support for multi-word cities (e.g., "New York").
